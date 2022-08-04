@@ -2,7 +2,7 @@ tf_regressor_endo_feature_extract_no_mamc.ipynb
 
 Predicts Endometriosis case vs control using methylation values (CPG islands) using Tensorflow 
 
-Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction_SUBSET.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction_SUBSET.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction_SUBSET.csv
+Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunctio.csv
 (train, validation and test datasets)
 
 Required packages: numpy, pandas, tensorflow, sklearn, scipy, itertools, matplotlib, seaborn, mlextend and awswrangler if running on aws)
@@ -13,7 +13,7 @@ Pytorch Endo Captum IG No MAMC.ipynb
 
 Predicts Endometriosis case vs control using methylation values (CPG islands) using Pytorch
 
-Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction_SUBSET.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction_SUBSET.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction_SUBSET.csv
+Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction.csv
 (train, validation and test datasets)
 
 Required packages: numpy, pandas, wandb, torch, captum and awswranger if running on aws
@@ -23,7 +23,36 @@ Pytorch Cycle Phase Captum IG No MAMC.ipynb
 
 Predicts Menstrual Cycle Phase using methylation values (CPG islands) using Pytorch (sanity check)
 
-Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction_SUBSET.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction_SUBSET.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction_SUBSET.csv
+Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction.csv
 (train, validation and test datasets)
 
 Required packages: numpy, pandas, wandb, torch, captum and awswranger if running on aws
+--------
+Meth_full_split_and_feature_extract.ipynb
+
+Combine full methylation csv (M_batch1_batch2_select_no_ffpe_corrected.csv) and full phenotype csv (phenotype_mappings.csv). Remove MAMC samples and split full dataset into train, validation and test datasets. 
+Feature extract on train and validation datasets. Subset the same features present in train and validation datasets on testing dataset. Write all 3 datasets to csv. 
+
+resulting files: train (Endometriosis_subset_train_feature_extract_no_mamc_splitfunction.csv), val (Endometriosis_subset_val_feature_extract_no_mamc_splitfunction.csv), test (Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction.csv)
+
+required packages: numpy, pandas, sklearn, scipy
+--------
+PCA.ipynb
+
+Load and concatenate feature extracted datasets (train, val and test). Use standard scalar on the mehtylation values. Map color to features (cycle phase, batch, institute etc). 
+Plot PCA and color by desired feature. 
+
+Code also includes same pipeline for the full dataset.
+
+Required packages: pandas, numpy, matplotlib, plotly, sklearn, awswrangler
+
+
+
+
+
+
+
+
+
+
+
