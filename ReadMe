@@ -1,0 +1,29 @@
+tf_regressor_endo_feature_extract_no_mamc.ipynb
+
+Predicts Endometriosis case vs control using methylation values (CPG islands) using Tensorflow 
+
+Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction_SUBSET.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction_SUBSET.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction_SUBSET.csv
+(train, validation and test datasets)
+
+Required packages: numpy, pandas, tensorflow, sklearn, scipy, itertools, matplotlib, seaborn, mlextend and awswrangler if running on aws)
+
+
+--------
+Pytorch Endo Captum IG No MAMC.ipynb
+
+Predicts Endometriosis case vs control using methylation values (CPG islands) using Pytorch
+
+Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction_SUBSET.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction_SUBSET.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction_SUBSET.csv
+(train, validation and test datasets)
+
+Required packages: numpy, pandas, wandb, torch, captum and awswranger if running on aws
+
+--------
+Pytorch Cycle Phase Captum IG No MAMC.ipynb
+
+Predicts Menstrual Cycle Phase using methylation values (CPG islands) using Pytorch (sanity check)
+
+Uses 3 files: Endometriosis_subset_train_feature_extract_no_mamc_splitfunction_SUBSET.csv, Endometriosis_subset_val_feature_extract_no_mamc_splitfunction_SUBSET.csv,Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction_SUBSET.csv
+(train, validation and test datasets)
+
+Required packages: numpy, pandas, wandb, torch, captum and awswranger if running on aws
