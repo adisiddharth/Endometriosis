@@ -31,11 +31,18 @@ Required packages: numpy, pandas, wandb, torch, captum and awswranger if running
 Meth_full_split_and_feature_extract.ipynb
 
 Combine full methylation csv (M_batch1_batch2_select_no_ffpe_corrected.csv) and full phenotype csv (phenotype_mappings.csv). Remove MAMC samples and split full dataset into train, validation and test datasets. 
-Feature extract on train and validation datasets. Subset the same features present in train and validation datasets on testing dataset. Write all 3 datasets to csv. 
+Feature extract on train and validation datasets with respect to Endo case vs control (stratified by cycle phase). Subset the same features present in train and validation datasets on testing dataset. Write all 3 datasets to csv. 
 
 resulting files: train (Endometriosis_subset_train_feature_extract_no_mamc_splitfunction.csv), val (Endometriosis_subset_val_feature_extract_no_mamc_splitfunction.csv), test (Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction.csv)
 
 required packages: numpy, pandas, sklearn, scipy
+--------
+Meth_full_split_and_feature_extract_cycle_phase.ipynb
+
+Perform similar function as notebook above but feature extract with respect to cycle phase (stratified by Endo case vs control). 
+
+resulting files: train (Endometriosis_subset_train_feature_extract_no_mamc_splitfunction_cycle_phase_stratify_by_endo.csv), val (Endometriosis_subset_val_feature_extract_no_mamc_splitfunction_cycle_phase_stratify_by_endo.csv), and test (Endometriosis_subset_test2_feature_extract_no_mamc_splitfunction_cycle_phase_stratify_by_endo.csv)
+
 --------
 PCA.ipynb
 
